@@ -1,0 +1,17 @@
+service: intermediate-container
+
+provider:
+  name: aws
+  ecr:
+    images:
+      appimage:
+        path: ./
+  region: ${opt:region, 'ap-southeast-1'}
+
+functions:
+  app:
+    image:
+      name: appimage
+    events:
+      - http: ANY /
+      - http: 'ANY /{proxy+}'

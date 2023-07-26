@@ -1,0 +1,8 @@
+Flask
+serverless-wsgi
+requests
+opencv-python-headless
+matplotlib
+numpy
+sagemaker
+docker
